@@ -1,9 +1,0 @@
-### Send a form with the text and file fields
-POST http://127.0.0.1:5000/upload
-Content-Type: multipart/form-data; boundary=WebAppBoundary
-
---WebAppBoundary
-Content-Disposition: form-data; name="file"; filename="exercise4.mp4"
-Content-Type: media/mp4
-
-< ./uploads/exercise4.mp4

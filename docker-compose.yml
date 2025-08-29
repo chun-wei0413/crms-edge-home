@@ -47,10 +47,10 @@ services:
     networks:
       - monitoring-net
 
-  pose-tracker:
-    image: russellli/pose-tracker:latest
+  pose-analysis-service:
+    image: russellli/pose-analysis-service:latest
     ports:
-      - "5000:5000"
+      - "5000:5001"
     environment:
       MINIO_HOST: minio:9000
       MINIO_ROOT_USER: DefaultUser
@@ -67,8 +67,8 @@ services:
     networks:
       - monitoring-net
 
-  clean-robot:
-    image: russellli/clean-robot:latest
+  cleaning-robot-service:
+    image: russellli/cleaning-robot-service:latest
     ports:
       - "5001:5000"
     deploy:
@@ -99,12 +99,12 @@ services:
     networks:
       - monitoring-net
 
-  bot-ui:
-    image: russellli/bot-ui:latest
+  web-frontend:
+    image: russellli/web-frontend:latest
     ports:
-      - "3000:3000"  # bot-ui 保持使用3000端口
+      - "3000:3000"  # web-frontend 保持使用3000端口
     environment:
-      API_URL: http://192.168.1.36
+      API_URL: http://localhost:5000
     deploy:
       mode: global
       placement:

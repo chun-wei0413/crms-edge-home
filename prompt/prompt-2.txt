@@ -1,0 +1,9 @@
+幫我運行以下四個專案
+1. cleaning-robot-service
+2. pose-analysis-service
+3. web-frontend
+4. minio-test
+
+另外幫我寫一些E2E測試來確定這整個系統是可以運行的。
+並使用video/test1.mp4 來作為cleaning robot測試的素材
+

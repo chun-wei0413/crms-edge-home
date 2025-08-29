@@ -1,0 +1,10 @@
+這是基於邊緣運算居家微服務之計算資源管理系統。
+本專案提出了一套基於邊緣運算的計算資源管理系統，利用微服務架構，專門針對家庭多媒體數據的處理需求。透過在低成本、低功耗的樹莓派上部署的數個程式。
+使用容器化技術讓此系統更有可擴性和可維護性，並著重於資源受限環境中的數據處理和負載平衡。
+
+但我現在是使用一台主機在開發這個專案，所以不需要考慮多個樹梅派的情況下使用。
+本專案包含以下Submodule:
+1. web-frontend: 這個是本專案使用的UI，包括pose-analysis-service的UI還有cleaning-robot-service的UI。
+2. cleaning-robot-service: 這個是模擬掃地機器人行為的後端。
+3. pose-analysis-service: 這裡使用mediapipe的python flask。
+4. minio-test: 放minio的yml。
